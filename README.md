@@ -1,4 +1,5 @@
 # liberal-arts-class-recommendation-algorithm
+## Naming and Branding of The Proposed Project
 > The LACRAS is a system that recommends the liberal arts class for university students.
 
 [![NPM Version][npm-image]][npm-url]
@@ -9,7 +10,7 @@
 
 ![](../header.png)
 
-## 설치 방법
+## Promblem Statement
 
 OS X & 리눅스:
 
@@ -23,13 +24,13 @@ npm install my-crazy-module --save
 edit autoexec.bat
 ```
 
-## 사용 예제
+## Mission Statement
 
 스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
 
 _더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
 
-## 개발 환경 설정
+## Features List
 
 모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
 
@@ -38,7 +39,7 @@ make install
 npm test
 ```
 
-## 업데이트 내역
+## Target Development Language
 
 * 0.2.1
     * 수정: 문서 업데이트 (모듈 코드 동일)
