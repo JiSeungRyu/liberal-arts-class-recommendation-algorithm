@@ -15,21 +15,13 @@ We welcome your contributions. LACRAS is the open source project. Everything, fr
 
 ## Promblem Statement
 
-OS X & 리눅스:
+Senior students know which class is good. However, it is difficult for freshmen to know. In particular, it is difficult to obtain more information due to less communication with senior students due to COVID-19. So we will create a liberal arts recommendation system. The main target is 1st and 2nd graders, and 3rd and 4th graders can use it for graduation requirements.![image](https://user-images.githubusercontent.com/92665200/140684061-7c70ca2d-e158-4ec3-b9d6-9a65bfe9783b.png)
 
-```sh
-npm install my-crazy-module --save
-```
-
-윈도우:
-
-```sh
-edit autoexec.bat
-```
 
 ## Mission Statement
 
-스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
+Create a recommended site for Liberal Arts only for Sejong University, which is convenient and accurate. We hope the open source we develop will help freshmen or enrolled students.
+
 
 _더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
 
