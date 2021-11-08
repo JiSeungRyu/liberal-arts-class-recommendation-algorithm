@@ -6,7 +6,10 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-한 두 문단으로 프로젝트 소개 글을 작성합니다.
+Based on the "subject similarity algorithm" developed by Sejong University and the "cooperative filtering algorithm" famous for Netflix's movie recommendation algorithm, it was developed as a model for recommending three liberal arts subjects by setting various hyperparameters to increase the performance and satisfaction of recommendations.
+
+We welcome your contributions. LACRAS is the open source project. Everything, from this website to the core of the database itself, has been contributed by helpful individuals. The time and attention of our contributors is our most precious resource, and we always need more of it. Our primary goal is to build a welcoming, supporting, inclusive and diverse community. We abide by Code of Conduct and a set of the project by laws. Welcome to the LACRAS.
+
 
 ![](../header.png)
 
