@@ -15,7 +15,7 @@ We welcome your contributions. LACRAS is the open source project. Everything, fr
 
 ## Promblem Statement
 
-Senior students know which class is good. However, it is difficult for freshmen to know. In particular, it is difficult to obtain more information due to less communication with senior students due to COVID-19. So we will create a liberal arts recommendation system. The main target is 1st and 2nd graders, and 3rd and 4th graders can use it for graduation requirements.![image](https://user-images.githubusercontent.com/92665200/140684061-7c70ca2d-e158-4ec3-b9d6-9a65bfe9783b.png)
+Senior students know which class is good. However, it is difficult for freshmen to know. In particular, it is difficult to obtain more information due to less communication with senior students due to COVID-19. So we will create a liberal arts recommendation system. The main target is 1st and 2nd graders, and 3rd and 4th graders can use it for graduation requirements.
 
 
 ## Mission Statement
