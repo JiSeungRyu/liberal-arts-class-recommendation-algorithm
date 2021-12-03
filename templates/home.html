@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LACRAS</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home_style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='LACRASLOGO.ico')}}">
+    <script src="https://kit.fontawesome.com/571f53093f.js" crossorigin="anonymous"></script>
+    </script>
+</head>
+
+<body>
+    <div class="log">
+        <a href="http://www.sejong.ac.kr/" target="_blank" class="log-sejong">
+            <img src="{{url_for('static', filename='imgs/sejong.png')}}" width="100%">
+        </a>
+        <a href='{{url_for(' home')}}' class="LACRAS">
+            <img src="{{url_for('static', filename='imgs/LACRAS.png')}}" width="100%">
+        </a>
+        <div class="portal-container">
+            <a class="portal" href="https://blackboard.sejong.ac.kr/" target="_blank">블랙보드</a>
+            <a class="portal" href="https://sjpt.sejong.ac.kr/main/view/Login/doSsoLogin.do?p="
+                target="_blank">학사정보시스템</a>
+            <a class="portal" href="http://portal.sejong.ac.kr/" target="_blank">포탈</a>
+        </div>
+    </div>
+    <div class="first">
+        <div class="first-class">교양 추천 시스템</div>
+        <div class="first-eng">liberal arts class recommendation algorithm</div>
+        <img src="{{url_for('static', filename='imgs/LACRAS_2col.png')}}" class="LACRAS_2">
+    </div>
+    <div class="second">
+        <form class="button">
+            <input class="second-botton" type="button" value="교양 추천 받으러 가기"
+                onclick="location.href='{{url_for('index')}}'" />
+        </form>
+    </div>
+    <footer id="main-footer">
+        <div class="footer-name">
+            <div class="name">세종대학교 데이터사이언스학과 19 이한빈</div>
+            <div class="name">세종대학교 데이터사이언스학과 19 최진실</div>
+            <div class="name">세종대학교 데이터사이언스학과 19 임다영</div>
+            <div class="name">세종대학교 데이터사이언스학과 20 류지승</div>
+        </div>
+        <p class="footer-container">
+            <i class="fas fa-phone-alt"> 010-5094-3789</i><br>
+            <i class="fas fa-envelope"> chl378900@naver.com</i><br>
+            <i class="far fa-copyright fa-xs"> 2021 by LACRAS</i><br>
+        </p>
+    </footer>
+</body>
+
+</html>

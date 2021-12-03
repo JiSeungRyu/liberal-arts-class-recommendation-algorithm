@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LACSRAS</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index_style.css')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='LACRASLOGO.ico')}}">
+    <script src="https://kit.fontawesome.com/571f53093f.js" crossorigin="anonymous"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="log">
+        <a href="http://www.sejong.ac.kr/" target="_blank" class="log-sejong">
+            <img src="{{url_for('static', filename='imgs/sejong.png')}}" width="100%">
+        </a>
+        <a href='{{url_for(' home')}}' class="LACRAS">
+            <img src="{{url_for('static', filename='imgs/LACRAS.png')}}" width="100%">
+        </a>
+        <div class="portal-container">
+            <a class="portal" href="https://blackboard.sejong.ac.kr/" target="_blank">블랙보드</a>
+            <a class="portal" href="https://sjpt.sejong.ac.kr/main/view/Login/doSsoLogin.do?p="
+                target="_blank">학사정보시스템</a>
+            <a class="portal" href="http://portal.sejong.ac.kr/" target="_blank">포탈</a>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="checklist">
+            <div class="checknumber">
+                <h3 class="h1name">학번</h3>
+                <div class="numbername">
+                    <div class="button-2" id='17'>
+                        <div class="eff-2"></div>
+                        <a href="#" class="name-color17"> 17 </a>
+                    </div>
+                    <div class="button-2" id='18'>
+                        <div class="eff-2"></div>
+                        <a href="#" class="name-color18"> 18 </a>
+                    </div>
+                    <div class="button-2" id='19'>
+                        <div class="eff-2"></div>
+                        <a href="#" class="name-color19"> 19 </a>
+                    </div>
+                    <div class="button-2" id='20'>
+                        <div class="eff-2"></div>
+                        <a href="#" class="name-color20"> 20 </a>
+                    </div>
+                    <div class="button-2" id='21'>
+                        <div class="eff-2"></div>
+                        <a href="#" class="name-color21"> 21 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="checkmajor">
+            <h3 class="majorname">학과</h3>
+            <div class="major">
+                <div class="numbername1">
+                    <div class="button-2" id='com'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 컴퓨터공학과 </a>
+                    </div>
+                    <div class="button-2" id='pro'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 정보보호학과 </a>
+                    </div>
+                    <div class="button-2" id='soft'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 소프트웨어학과 </a>
+                    </div>
+                    <div class="button-2" id='data'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 데이터사이언스학과 </a>
+                    </div>
+                    <div class="button-2" id='design'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 디자인이노베이션전공 </a>
+                    </div>
+                    <div class="button-2" id='cartoon'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 만화애니메이션텍전공 </a>
+                    </div>
+                    <div class="button-2" id='AI'>
+                        <div class="eff-2"></div>
+                        <a href="#"> 인공지능학과 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other">
+        <h4 class="info">교선1 이수 기준</h4>
+        <p class="info">1. 사상과역사, 사회와문화, 융합과창업, 자연과과학기술, 세계와지구촌 중 3개
+            영역 이상 이수<br>
+            2. 21학점 이상 이수<br>
+            (두 가지 모두 충족해야함)</p>
+
+        <div class="17 com" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 com" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 com" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 com" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 com" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="17 pro" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명<br>정보사회의사이버윤리</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 pro" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명<br>정보사회의사이버윤리</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 pro" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명<br>정보사회의사이버윤리</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 pro" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명<br>정보사회의사이버윤리</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 pro" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명<br>정보사회의사이버윤리</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="17 soft" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 soft" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 soft" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 soft" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 soft" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="17 data" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 data" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 data" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 data" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 data" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="17 cartoon" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>소프트웨어기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 cartoon" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 cartoon" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 cartoon" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 cartoon" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="17 design" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>소프트웨어기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="18 design" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="19 design" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="20 design" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 design" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">프로그래밍입문-P<br>컴퓨팅사고기초코딩</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="21 ai" id="hidden">
+            <div class="arts-body">
+                <table class="arts" border="1">
+                    <caption>교선1</caption>
+                    <thead>
+                        <tr>
+                            <th>영역</th>
+                            <th>필수</th>
+                            <th>선택</th>
+                            <th>순위</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>사상과역사</td>
+                        <td class="history_O">세계사:인간과문명</td>
+                        <td class="history_X"></td>
+                        <td class="history_R"></td>
+                    </tr>
+                    <tr>
+                        <td>사회와문화</td>
+                        <td class="culture_O">X</td>
+                        <td class="culture_X"></td>
+                        <td class="culture_R"></td>
+                    </tr>
+                    <tr>
+                        <td>융합과창업</td>
+                        <td class="startup_O">X</td>
+                        <td class="startup_X"></td>
+                        <td class="startup_R"></td>
+                    </tr>
+                    <tr>
+                        <td>자연과과학기술</td>
+                        <td class="science_O">고급프로그래밍입문-P<br>Technical Writing기초</td>
+                        <td class="science_X"></td>
+                        <td class="science_R"></td>
+                    </tr>
+                    <tr>
+                        <td>세계와지구촌</td>
+                        <td class="world_O">X</td>
+                        <td class="world_X"></td>
+                        <td class="world_R"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="main-footer">
+        <div class="footer-name">
+            <div class="name">세종대학교 데이터사이언스학과 19 이한빈</div>
+            <div class="name">세종대학교 데이터사이언스학과 19 최진실</div>
+            <div class="name">세종대학교 데이터사이언스학과 19 임다영</div>
+            <div class="name">세종대학교 데이터사이언스학과 20 류지승</div>
+        </div>
+        <p class="footer-container">
+            <i class="fas fa-phone-alt"> 010-5094-3789</i><br>
+            <i class="fas fa-envelope"> chl378900@naver.com</i><br>
+            <i class="far fa-copyright fa-xs"> 2021 by LACRAS</i><br>
+        </p>
+    </div>
+    <script src="{{url_for('static', filename='js/index_java.js')}}"></script>
+    <script src="{{url_for('static', filename='js/algorithm.js')}}"></script>
+    <script src="{{url_for('static', filename='js/return.js')}}"></script>
+</body>
+
+</html>
