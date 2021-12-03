@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# liberal-arts-class-recommendation-algorithm
+## Naming and Branding of The Proposed Project
+> The LACRAS is a system that recommends the liberal arts class for university students.
 
-You can use the [editor on GitHub](https://github.com/JiSeungRyu/liberal-arts-class-recommendation-algorithm/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Based on the "subject similarity algorithm" developed by Sejong University and the "cooperative filtering algorithm" famous for Netflix's movie recommendation algorithm, it was developed as a model for recommending three liberal arts subjects by setting various hyperparameters to increase the performance and satisfaction of recommendations.
 
-### Markdown
+We welcome your contributions. LACRAS is the open source project. Everything, from this website to the core of the database itself, has been contributed by helpful individuals. The time and attention of our contributors is our most precious resource, and we always need more of it. Our primary goal is to build a welcoming, supporting, inclusive and diverse community. We abide by Code of Conduct and a set of the project by laws. Welcome to the LACRAS.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+![](../header.png)
 
-# Header 1
-## Header 2
-### Header 3
+## Promblem Statement
 
-- Bulleted
-- List
+Senior students know which class is good. However, it is difficult for freshmen to know. In particular, it is difficult to obtain more information due to less communication with senior students due to COVID-19. So we will create a liberal arts recommendation system. The main target is 1st and 2nd graders, and 3rd and 4th graders can use it for graduation requirements.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Mission Statement
 
-[Link](url) and ![Image](src)
-```
+Create a recommended site for Liberal Arts only for Sejong University, which is convenient and accurate. We hope the open source we develop will help freshmen or enrolled students.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+## Features List
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JiSeungRyu/liberal-arts-class-recommendation-algorithm/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The liberal arts class recommendation algorithm system.
+• (planned) Recommendation for Online / Offline.
+• (planned) Recommendation credit.
+• (planned) Recommendation for the field of liberal arts selection.
+• (planned) Recommendation for the rating of the lecture.
+• (planned) Recommendation for the subject that students usually prefer
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Target Development Language
+
+-	Html
+-	Css3
+-	Javascript
+-	Python(Numpy / Pandas / BeautifulSoup / Crab / Algorithm for collaborative filtering)
+-	Node.js
+-	PHP
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
