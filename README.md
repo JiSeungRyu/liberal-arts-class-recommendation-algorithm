@@ -5,7 +5,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
-[![Version](https://github.com/JiSeungRyu/liberal-arts-class-recommendation-algorithm/blob/main/version.md.svg)](https://github.com/JiSeungRyu/liberal-arts-class-recommendation-algorithm/blob/main/version.md)
+[![Version]](https://github.com/JiSeungRyu/liberal-arts-class-recommendation-algorithm/blob/main/version.md)
 
 
 Based on the "subject similarity algorithm" developed by Sejong University and the "cooperative filtering algorithm" famous for Netflix's movie recommendation algorithm, it was developed as a model for recommending three liberal arts subjects by setting various hyperparameters to increase the performance and satisfaction of recommendations.
