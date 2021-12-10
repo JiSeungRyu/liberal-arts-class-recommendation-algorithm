@@ -5,7 +5,8 @@
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
-![Generic badge](https://img.shields.io/badge/{front text}-{rear text}-{color}.svg)
+[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
+
 
 Based on the "subject similarity algorithm" developed by Sejong University and the "cooperative filtering algorithm" famous for Netflix's movie recommendation algorithm, it was developed as a model for recommending three liberal arts subjects by setting various hyperparameters to increase the performance and satisfaction of recommendations.
 
